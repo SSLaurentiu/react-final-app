@@ -1,0 +1,44 @@
+.navbar {
+  background-image: url("../assets/background.png");
+  background-color: rgb(255, 255, 255);
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-links li {
+  margin: 0 1rem;
+  margin-left: 0;
+}
+
+.navbar-links a {
+  color: rgb(255, 0, 0);
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 1.5px black;
+  text-decoration: none;
+  transition: 0.25s;
+  padding: 7px;
+
+  &:hover {
+    color: #ddd;
+  }
+}
+
+.search_icon {
+  height: 1rem;
+}
+.search_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
