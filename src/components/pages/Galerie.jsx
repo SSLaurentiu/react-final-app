@@ -5,9 +5,7 @@ export const Galerie = () => {
   return (
     <>
       <Navbar />
-      <div>
-        <img src="./pathfinder1.png" alt="" />
-      </div>
+      <div></div>
       <div>
         <Footer></Footer>
       </div>

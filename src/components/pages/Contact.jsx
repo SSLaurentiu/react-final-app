@@ -5,7 +5,7 @@ export const Contact = () => {
     <>
       <Navbar />
       <div>
-        <h1 className="titlucontact">Contact</h1>
+        <h1 className="titlu_pagina">Contact</h1>
         <p className="containercontact">
           Pentru mai multe informatii despre produsele noastre, despre preturile
           produselor si preturile pentru montajul acestora , in atelierele

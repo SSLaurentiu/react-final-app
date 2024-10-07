@@ -4,10 +4,6 @@ import "../Styling/navbar.css";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="search-box">
-        <input type="text" placeholder="Search" />
-        <img className="search_icon" src="../search-b.png" alt="image" />
-      </div>
       <div>
         <ul className="navbar-links">
           <li className="logo">

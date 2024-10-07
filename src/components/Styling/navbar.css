@@ -33,12 +33,3 @@
     color: #ddd;
   }
 }
-
-.search_icon {
-  height: 1rem;
-}
-.search_box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
