@@ -367,24 +367,33 @@ export const Proiectoare = () => {
           <img src="LB_OSRAM_FX500.png" alt="" />
           <div>
             <h1 className="titlu_proiector">
-              Strands Lighting DRAGON Drive 9"
+              Bara LED Osram FX500-CB SM Gen2 Combo
             </h1>
             <div className="descriere">
-              Proiectorul Dragon Drive are putere reală în spatele luminozității
-              sale. Fasciculul extins are 9300 lumeni, 6500 kelvin și o rază de
-              acțiune de 586 m. FOR9T ESTE PASIUNE. Lăsați performanța
-              superioară a FOR9T Dragon Drive să arate calea. Cu o lumină de
-              poziție albă și chihlimbar, poți să-ți alegi strălucirea și să-ți
-              arăți pasiunea. Maestria designului negru îmbunătățește și mai
-              mult forma și luminozitatea luminii de poziție unice. Dragon Drive
-              are un design în care toate detaliile contează: carcasa sa ușoară
-              din aluminiu, materialele de înaltă calitate și designul curat îl
-              fac un accesoriu puternic pentru orice vehicul. Fasciculul extins
-              are o rază lungă de acțiune și vizibilitate ridicată pentru a vă
-              ghida în întuneric. Datorită luminii puternice, nimic nu vă poate
-              împiedica să explorați noaptea.
+              Explorati cele mai intunecate colturi ale lumii. Bara LED
+              generatie noua (Gen2) de la OSRAM FX500-CB SM ofera o lumina
+              impresionanta si o performanta ridicata. Fiind varianta Combo, ce
+              lumineaza atat pe laterale cat si pe lungime , aceasta este
+              instrumentul potrivit pentru a ilumina orice aventura de off-road.
             </div>
-            <div className="caracteristici"></div>
+            <div className="caracteristici">
+              Caracteristici:
+              <br />
+              -15 LED-uri ce dezvolta o lumina de pana la 380 de metri si 3750
+              lumeni
+              <br />
+              -lumina alba si puternica cu temperatura de culoare de 6000K
+              <br />
+              -lentila din policarbonat rezistenta la spargere si carcasa din
+              aluminiu turnat sub presiune, vopsita cu pulbere neagra
+              <br />
+              -sistem de racire si control al temperaturii integrat, ce elimina
+              riscul de supraincalzire
+              <br />
+              -protectie pentru supra si sub voltaj
+              <br />
+              -certificare ECE pentru utilizare stradala si off-road
+            </div>
           </div>
         </div>
         <div className="grid_item">
@@ -400,7 +409,34 @@ export const Proiectoare = () => {
               lumineaza atat pe laterale cat si pe lungime , aceasta este
               instrumentul potrivit pentru a ilumina orice aventura de off-road.
             </div>
-            <div className="caracteristici"></div>
+            <div className="caracteristici">
+              Caracteristici:
+              <br />
+              -25 LED-uri ce dezvolta o lumina de pana la 450 de metri si 5990
+              lumeni
+              <br />
+              -lumina alba si puternica cu temperatura de culoare de 6000K
+              <br />
+              -lentila din policarbonat rezistenta la spargere si carcasa din
+              aluminiu turnat sub presiune, vopsita cu pulbere neagra
+              <br />
+              -sistem de racire si control al temperaturii integrat, ce elimina
+              riscul de supraincalzire
+              <br />
+              -protectie pentru supra si sub voltaj
+              <br />
+              -certificare ECE pentru utilizare stradala si off-road
+              <br />
+              -Temperatura de culoare 6000K
+              <br />
+              -Putere 94 W
+              <br />
+              -Tensiune de alimentare 12/24 V
+              <br />
+              -Protectie IP6K8 & IP6K9K
+              <br />
+              -Certificare 2x ECE R149, ECE R10, ECE (Ref. 2x 20)
+            </div>
           </div>
         </div>
         <div className="grid_item">
