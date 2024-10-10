@@ -38,3 +38,7 @@
   overflow: hidden;
   max-width: 100%;
 }
+.led_descriere_pagina {
+  color: #662d2d;
+  text-align: left;
+}

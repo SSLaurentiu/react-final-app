@@ -1,4 +1,4 @@
-.a_titlu_pagina {
+.anv_titlu_pagina {
   color: #662d2d;
   text-align: center;
 }
@@ -36,4 +36,8 @@
   border-radius: 15px;
   overflow: hidden;
   max-width: 100%;
+}
+.anv_descriere_pagina {
+  color: #662d2d;
+  text-align: left;
 }

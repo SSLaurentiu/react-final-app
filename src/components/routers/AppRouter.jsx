@@ -3,7 +3,7 @@ import Home from "../pages/Home";
 import { Contact } from "../pages/Contact";
 import { Galerie } from "../pages/Galerie";
 import { Suspensii } from "../pages/Suspensii";
-import { Proiectoare } from "../pages/Priectoare";
+import { Proiectoare } from "../pages/Proiectoare";
 import { Bare } from "../pages/Bare";
 import { Jante } from "../pages/Jante";
 import { Anvelope } from "../pages/Anvelope";
@@ -26,9 +26,3 @@ const AppRouter = () => {
 };
 
 export default AppRouter;
-/*<Route path="/Galerie" element={<Galerie />} />
-<Route path="/Suspensii" element={<Suspensii />} />
-<Route path="/Proiectoare" element={<Proiectoare />} />
-<Route path="/Jante" element={<Jante />} />
-<Route path="/Bare" element={<Bare />} />
-<Route path="/Accesorii" element={<Accesorii />} />*/

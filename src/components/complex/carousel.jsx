@@ -1,175 +1,153 @@
-import React from "react";
-import "../Styling/carousel.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import { useEffect, useState, useMemo } from "react";
+import PropTypes from "prop-types";
+import image_1 from "../assets/images/image_1.png";
+import image_2 from "../assets/images/image_2.png";
+import image_3 from "../assets/images/image_3.png";
+import image_4 from "../assets/images/image_4.png";
+import image_5 from "../assets/images/image_5.png";
+import image_6 from "../assets/images/image_6.png";
+import image_7 from "../assets/images/image_7.png";
+import image_8 from "../assets/images/image_8.png";
+import image_9 from "../assets/images/image_9.png";
+import image_10 from "../assets/images/image_10.png";
+import image_11 from "../assets/images/image_11.png";
+import image_12 from "../assets/images/image_12.png";
+import image_13 from "../assets/images/image_13.png";
+import image_14 from "../assets/images/image_14.png";
+import image_15 from "../assets/images/image_15.png";
+import image_16 from "../assets/images/image_16.png";
+import image_17 from "../assets/images/image_17.png";
+import image_18 from "../assets/images/image_18.png";
+import image_19 from "../assets/images/image_19.png";
+import image_20 from "../assets/images/image_20.png";
+import image_21 from "../assets/images/image_21.png";
+import image_22 from "../assets/images/image_22.png";
+import image_23 from "../assets/images/image_23.png";
+import image_24 from "../assets/images/image_24.png";
+import image_25 from "../assets/images/image_25.png";
+import image_26 from "../assets/images/image_26.png";
+import image_27 from "../assets/images/image_27.png";
+import image_28 from "../assets/images/image_28.png";
+import image_29 from "../assets/images/image_29.png";
+import image_30 from "../assets/images/image_30.png";
+import "../styling/carousel.css";
 
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-// import SwiperCore, { EffectCoverFlow, Pagination,Navigation } from "swiper";
-// SwiperCore.use([EffectCoverFlow, Pagination,Navigation]);
+const Carousel = ({ currentIndex, setCurrentIndex }) => {
+  const images = useMemo(
+    () => [
+      image_1,
+      image_2,
+      image_3,
+      image_4,
+      image_5,
+      image_6,
+      image_7,
+      image_8,
+      image_9,
+      image_10,
+      image_11,
+      image_12,
+      image_13,
+      image_14,
+      image_15,
+      image_16,
+      image_17,
+      image_18,
+      image_19,
+      image_20,
+      image_21,
+      image_22,
+      image_23,
+      image_24,
+      image_25,
+      image_26,
+      image_27,
+      image_28,
+      image_29,
+      image_30,
+    ],
+    []
+  );
+  const [isLoaded, setIsLoaded] = useState(true); // Start as true for the first image
 
+  // Preload images
+  useEffect(() => {
+    const preloadImages = () => {
+      images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+    };
+    preloadImages();
+  }, [images]);
 
-import slide_image_1 from "../assets/images/image_1.png";
-import slide_image_2 from "../assets/images/image_2.png";
-import slide_image_3 from "../assets/images/image_3.png";
-import slide_image_4 from "../assets/images/image_4.png";
-import slide_image_5 from "../assets/images/image_5.png";
-import slide_image_6 from "../assets/images/image_6.png";
-import slide_image_7 from "../assets/images/image_7.png";
-import slide_image_8 from "../assets/images/image_8.png";
-import slide_image_9 from "../assets/images/image_9.png";
-import slide_image_10 from "../assets/images/image_10.png";
-import slide_image_11 from "../assets/images/image_11.png";
-import slide_image_12 from "../assets/images/image_12.png";
-import slide_image_13 from "../assets/images/image_13.png";
-import slide_image_14 from "../assets/images/image_14.png";
-import slide_image_15 from "../assets/images/image_15.png";
-import slide_image_16 from "../assets/images/image_16.png";
-import slide_image_17 from "../assets/images/image_17.png";
-import slide_image_18 from "../assets/images/image_18.png";
-import slide_image_19 from "../assets/images/image_19.png";
-import slide_image_20 from "../assets/images/image_20.png";
-import slide_image_21 from "../assets/images/image_21.png";
-import slide_image_22 from "../assets/images/image_22.png";
-import slide_image_23 from "../assets/images/image_23.png";
-import slide_image_24 from "../assets/images/image_24.png";
-import slide_image_25 from "../assets/images/image_25.png";
-import slide_image_26 from "../assets/images/image_26.png";
-import slide_image_27 from "../assets/images/image_27.png";
-import slide_image_28 from "../assets/images/image_28.png";
-import slide_image_29 from "../assets/images/image_29.png";
-import slide_image_30 from "../assets/images/image_30.png";
+  // Function to move to the next image
+  const nextImage = () => {
+    setIsLoaded(false); // Set to false to start the transition
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+      setIsLoaded(true); // Set to true once image changes
+    }, 1500); // Wait for 1.5 seconds (transition duration)
+  };
 
-function Carousel() {
+  // Function to move to the previous image
+  const prevImage = () => {
+    setIsLoaded(false); // Set to false to start the transition
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      );
+      setIsLoaded(true); // Set to true once image changes
+    }, 1500); // Wait for 1.5 seconds (transition duration)
+  };
+
+  // Timer logic to automatically cycle images
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextImage();
+    }, 5000); // 12 seconds: 10 for typing + 2 seconds to read
+
+    return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex, images.length]);
+
   return (
-    <div className="slider_container">
-      <h1 className="heading">Galerie </h1>
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
+    <div className="carousel">
+      <button
+        className="carousel__button prev"
+        onClick={() => {
+          prevImage();
+          document.activeElement.blur(); // Remove button focus after click
         }}
-        pagination={{ el: ".swiper-pagination", clickable: true }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
       >
-        <SwiperSlide>
-          <img src={slide_image_1} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_2} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_3} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_4} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_5} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_6} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_7} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_8} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_9} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_10} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_11} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_12} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_13} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_14} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_15} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_16} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_17} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_18} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_19} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_20} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_21} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_22} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_23} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_24} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_25} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_26} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_27} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_28} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_29} alt="slider_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_30} alt="slider_image" />
-        </SwiperSlide>
+        &#10094;
+      </button>
 
-        <div className="slider-controller">
-          <div className="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
-          </div>
-          <div className="swiper-button-next slider-arrow">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-          <div className="swiper-pagination"></div>
-        </div>
-      </Swiper>
+      <img
+        src={images[currentIndex]}
+        alt={`carousel-${currentIndex + 1}`}
+        className={`carousel__image ${isLoaded ? "loaded" : ""}`}
+        loading="lazy"
+      />
+
+      <button
+        className="carousel__button next"
+        onClick={() => {
+          nextImage();
+          document.activeElement.blur(); // Remove button focus after click
+        }}
+      >
+        &#10095;
+      </button>
     </div>
   );
-}
+};
+
+Carousel.propTypes = {
+  currentIndex: PropTypes.number.isRequired,
+  setCurrentIndex: PropTypes.func.isRequired,
+};
 
 export default Carousel;

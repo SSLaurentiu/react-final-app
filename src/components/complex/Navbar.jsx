@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../Styling/navbar.css";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
@@ -7,33 +8,73 @@ const Navbar = () => {
       <div>
         <ul className="navbar-links">
           <li>
-            <Link to="/">
-              <img className="logo_img" src="/logo.png" alt="image" />
-            </Link>
+            <NavLink to="/">
+              <img className="logo_img" src={logo} alt="image" />
+            </NavLink>
           </li>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/galerie">Galerie</Link>
+            <NavLink
+              to="/galerie"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Galerie
+            </NavLink>
           </li>
           <li>
-            <Link to="/suspensii">Suspensii</Link>
+            <NavLink
+              to="/suspensii"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Suspensii
+            </NavLink>
           </li>
           <li>
-            <Link to="/proiectoare">Proiectoare si bare LED</Link>
+            <NavLink
+              to="/proiectoare"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Proiectoare si bare LED
+            </NavLink>
           </li>
           <li>
-            <Link to="/jante">Jante</Link>
+            <NavLink
+              to="/jante"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Jante
+            </NavLink>
           </li>
           <li>
-            <Link to="/bare">Bare de protectie</Link>
+            <NavLink
+              to="/bare"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Bare de protectie
+            </NavLink>
           </li>
           <li>
-            <Link to="/anvelope">Anvelope</Link>
+            <NavLink
+              to="/anvelope"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Anvelope
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Contact
+            </NavLink>
           </li>
         </ul>
       </div>

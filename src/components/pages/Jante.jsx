@@ -17,6 +17,10 @@ export const Jante = () => {
   return (
     <>
       <Navbar />
+      <div>
+        <h1></h1>
+        <p></p>
+      </div>
       {rows.length > 0 ? (
         <div className="j_grid_container"> {rows}</div>
       ) : (

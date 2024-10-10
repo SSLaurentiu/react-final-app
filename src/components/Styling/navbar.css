@@ -23,15 +23,22 @@
 }
 
 .navbar-links a {
-  color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border: 1.5px black;
+  /* border: 1.5px black; */
   text-decoration: none;
   transition: 0.25s;
   padding: 7px;
 
   &:hover {
-    color: #ddd;
+    color: #8a8a8a;
   }
+}
+.logo_img {
+  width: 250px;
+  background-color: transparent;
+}
+.active-link {
+  border-bottom: 2px solid #8a8a8a;
 }

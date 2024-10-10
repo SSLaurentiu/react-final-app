@@ -16,6 +16,18 @@ export const Bare = () => {
   return (
     <>
       <Navbar />
+      <div className="b_descriere_pagina">
+        <h1 className="b_titlu_pagina">
+          Bare de protectie dedicate offroad-ului
+        </h1>
+        <p>
+          Barele de protectie , sunt special concepute pentru a oferii un plus
+          masinilor care sunt folosite in offroad. Acestea sunt confectionate
+          din otel sau aluminiu.Barele ofera posibilitatea montarea unui troliu,
+          lumini led suplimentare , ocheti de tractare si de asemenea ofera
+          rezistenta inbunatatita la impact.
+        </p>
+      </div>
       {rows.length > 0 ? (
         <div className="b_grid_container"> {rows}</div>
       ) : (
