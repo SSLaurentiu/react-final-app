@@ -6,7 +6,7 @@ import { Suspensii } from "../pages/Suspensii";
 import { Proiectoare } from "../pages/Priectoare";
 import { Bare } from "../pages/Bare";
 import { Jante } from "../pages/Jante";
-import { Accesorii } from "../pages/Accesorii";
+import { Anvelope } from "../pages/Anvelope";
 
 const AppRouter = () => {
   return (
@@ -19,7 +19,7 @@ const AppRouter = () => {
         <Route path="/proiectoare" element={<Proiectoare />} />
         <Route path="/bare" element={<Bare />} />
         <Route path="/jante" element={<Jante />} />
-        <Route path="/accesorii" element={<Accesorii />} />
+        <Route path="/anvelope" element={<Anvelope />} />
       </Routes>
     </BrowserRouter>
   );

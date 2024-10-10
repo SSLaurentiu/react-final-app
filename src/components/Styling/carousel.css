@@ -10,12 +10,15 @@
 :root {
   --primary: #6a59ff;
   --white: #ffffff;
-  --bg: #f5f5f5;
+  --bg: hsl(0, 0%, 100%);
 }
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+.heading{
+  color:#662d2d; 
 }
 
 @media (min-width: 1440px) {

@@ -6,9 +6,9 @@ const Navbar = () => {
     <nav className="navbar">
       <div>
         <ul className="navbar-links">
-          <li className="logo">
+          <li>
             <Link to="/">
-              <img src="/logo.png" alt="image" />
+              <img className="logo_img" src="/logo.png" alt="image" />
             </Link>
           </li>
           <li>
@@ -24,13 +24,13 @@ const Navbar = () => {
             <Link to="/proiectoare">Proiectoare si bare LED</Link>
           </li>
           <li>
-            <Link to="/jante">Jante si Anvelope</Link>
+            <Link to="/jante">Jante</Link>
           </li>
           <li>
             <Link to="/bare">Bare de protectie</Link>
           </li>
           <li>
-            <Link to="/accesorii">Accesorii</Link>
+            <Link to="/anvelope">Anvelope</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>

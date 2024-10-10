@@ -6,7 +6,10 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+// import SwiperCore, { EffectCoverFlow, Pagination,Navigation } from "swiper";
+// SwiperCore.use([EffectCoverFlow, Pagination,Navigation]);
+
 
 import slide_image_1 from "../assets/images/image_1.png";
 import slide_image_2 from "../assets/images/image_2.png";

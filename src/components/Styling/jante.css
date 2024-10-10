@@ -1,0 +1,39 @@
+.j_titlu_pagina {
+  color: #662d2d;
+  text-align: center;
+}
+.j_titlu_produs {
+  color: #662d2d;
+  text-align: center;
+  font-size: 35px;
+}
+.j_descriere {
+  color: #662d2d;
+}
+.j_caracteristici {
+  color: #662d2d;
+}
+.j_grid_container {
+  margin-top: 25px;
+  color: #662d2d;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-left: 10 px;
+  column-gap: 24px;
+  row-gap: 24px;
+}
+
+.j_grid_item {
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 3px 3px #662d2d;
+  width: 450px;
+}
+.j_imagine_produs {
+  border: 0.5px solid black;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 100%;
+}
